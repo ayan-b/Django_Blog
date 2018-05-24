@@ -2,7 +2,7 @@
 
 > A simple Blog and forum made in Django.
 
-This project is a simple blog where the admins can post articles and edit or delete them.
+This project is a simple blog and forum where the admins can post articles and edit or delete them.
 
 ## Building
 
