@@ -16,9 +16,20 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
+
+from accounts import views as account_views
+from boards import views
 
 urlpatterns = [
+
     url(r'^admin/', admin.site.urls),
     url(r'^', include('personal.urls')),
     url(r'^blog/', include('blog.urls')),
+    url(r'^forum/boards/(?P<pk>\d+)/$', views.board_topics, name = 'board_topics'),
+    url(r'^forum/boards/(?P<pk>\d+)/new/$', views.new_topic, name = 'new_topic'),
+    url(r'^signup/$', account_views.signup, name='signup'),
+    url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
+    url(r'^forum/', views.home, name = 'home'),
+
 ]

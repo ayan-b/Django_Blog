@@ -1,9 +1,9 @@
 {% extends "personal/header.html" %}
 {% block content %}
-<h3><a href = "/blog/{{post.id}}">{{ post.title }}</a></h3>
-<h6> on {{ post.date }}</h6>
 
-<div class = "container">
+<div class = "container", style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+<h2><a href = "/blog/{{post.id}}">{{ post.title }}</a></h2>
+<h6> on {{ post.date }}</h6>
 
     {{ post.body | safe | linebreaks }}
 

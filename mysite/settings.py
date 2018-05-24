@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
+    'widget_tweaks',
+    'boards',
     'personal',
     'blog',
     'django.contrib.admin',
@@ -121,3 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'personal/static/personal'),
+]
+
+LOGOUT_REDIRECT_URL = 'home'
