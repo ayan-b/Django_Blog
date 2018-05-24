@@ -27,7 +27,7 @@ This project is a simple blog where the admins can post articles and edit or del
 
 * Run `python manage.py createsuperuser` and set your user-name, email (optional) and password.
 
-* Then head over to `localhost: <your port name>/admin`.
+* Then head over to `localhost: <port no>/admin`.
 
 * Login using your credentials and now you can create, edit and delete your posts.
 
@@ -72,7 +72,7 @@ Please try to make sure that your commit message and body follows the guidelines
 Please try to follow this format as it will be helpful for maintainers as well as co-developers/contributors to stay aligned.
 
 ## Resources
-This project uses Django 1.9. Corresponding resources maybe found at [Django Docs](https://docs.djangoproject.com/en/1.9/).
+This project uses Django 1.11. Corresponding resources maybe found at [Django Docs](https://docs.djangoproject.com/en/1.11/).
 
 
 

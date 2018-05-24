@@ -29,7 +29,8 @@ urlpatterns = [
     url(r'^forum/boards/(?P<pk>\d+)/$', views.board_topics, name = 'board_topics'),
     url(r'^forum/boards/(?P<pk>\d+)/new/$', views.new_topic, name = 'new_topic'),
     url(r'^signup/$', account_views.signup, name='signup'),
-    url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
+    url(r'^login/$', auth_views.login, {'template_name':'login.html'}, name='login'),
+    url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^forum/', views.home, name = 'home'),
 
 ]
