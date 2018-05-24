@@ -1,6 +1,6 @@
 # Django Blog
 
-> A simple Blog made in Django.
+> A simple Blog and forum made in Django.
 
 This project is a simple blog where the admins can post articles and edit or delete them.
 
