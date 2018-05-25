@@ -1,114 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+  <html>
+    <head>
+    {% load staticfiles %}
+      <meta charset="utf-8" />
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-<head>
-	<title>Ayan Banerjee</title>
-	<meta charset="utf-8" />
-	{% load staticfiles %}
-	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+      <!-- Font Awesome for logos -->
+      <script src="https://use.fontawesome.com/b116e25694.js"></script>
 
-	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
-	
-	<style type="text/css">
-		html,
-		body {
-		  height:100%
-		},
-		#topheader .navbar-nav li > a {
-			text-transform: capitalize;
-			color: #333;
-			transition: background-color .2s, color .2s;
-			
-			&:hover,
-			&:focus {
-				background-color: #333;
-				color: #fff;
-		}
-	}
+      <!-- Emoji support -->
+      <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
-	#topheader .navbar-nav li.active > a {
-		background-color: #333;
-		color: #fff;
-	}
-	</style>
+      <title>Ayan Banerjee</title>
 
-		<script>
-	$( '#navbar .navbar-nav a' ).on( 'click', function () {
-			$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-			$( this ).parent( 'li' ).addClass( 'active' );
-		});
-	</script>
+    </head>
 
+    <body>
 
-</head>
+        <!-- <div class="navbar-fixed"> -->
+            <nav>
+                <div class="nav-wrapper teal hoverable">
+                    <a href="/" class="brand-logo">INSPIRATIE</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a class="waves-effect waves-light" href="/">Home</a></li>
+                        <li><a class="waves-effect waves-light" href="/contact/">Contact</a></li>
+                        <li><a class="waves-effect waves-light" href="/blog/">Blog</a></li>
+                        <li><a class="waves-effect waves-light" href="/forum/">Forum</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a class="waves-effect waves-red" href="/">Home</a></li>
+                        <li><a class="waves-effect waves-red" href="/contact/">Contact</a></li>
+                        <li><a class="waves-effect waves-red" href="/blog/">Blog</a></li>
+                        <li><a class="waves-effect waves-red" href="/forum/">Forum</a></li>
+                    </ul>
+                `</div>
+            </nav>
+        <!-- </div> -->
 
+        <div class="container" style="min-height:100%; ">
+            <div class="row">
+                <div class="col-s2">
+                    <br>
+                    <center>
+                        <img src="{% static 'personal/img/profile.png' %}" class="img-responsive" style='max-height:100px;' alt="face">
+                    </center>
+                </div>
+                <div class="col-s10">
+                    <br>
+                    <center>
+                        <h4>Express your thoughts <i class="em em-thinking_face"></i></h4>                        </h4>
+                    </center>
+                </div>
+            </div>
+        <hr>
 
+        <div class="row">
+                <div class="col-s10">
+                      <div class='container'>
+                      <br><br>
+                          {% block content %}
+                          {% endblock %}	
+                      </div>
+                </div>
+              </div> 
+          </div>
+        
+        
+        <footer>
+            <div class="container whitesmoke-darken-5" style=' box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'>
+                <p> 
+                    <a class="waves-effect waves-red btn-floating social linkedin"><i class="fa fa-linkedin"></i> Sign in with linkedin</a>
+                    <a class="waves-effect waves-red btn-floating social twitter"><i class="fa fa-twitter"></i> Sign in with twitter</a> 
+                    <a class="waves-effect waves-red btn-floating social google"><i class="fa fa-google"></i> Sign in with twitter</a>
+                </p>
+                <p>
+                    &copy;Ayan Banerjee 2018, All Rights Reserved
+                </p>
+            </div>
+        </footer>
+        
+        
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-<body class="body" style="background-color:#f6f6f6; min-height: 95%">
-
-	<div id="topheader">
-			<nav class="navbar navbar-default navbar-fixed-top", style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-				<div class="container-fluid">
-					 <div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="#">MySite</a>
-					 </div>
-					 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
-								<li><a href="/blog/">Blog</a></li>
-								<li><a href="/contact/">Contact</a></li>
-								<li><a href="/forum/">Forum</a></li>
-							</ul>
-					 </div>
-				</div>
-			</nav>
-		</div>
-	
-	<div class="container" style="min-height:100%; margin-top: 6%">
-		<div class="row">
-			  <div class="col-sm-2">
-				  <br>
-				  <center>
-						<img src="{% static 'personal/img/profile.png' %}" class="img-responsive" style='max-height:100px;' alt="face">
-				  </center>
-			  </div>
-			<div class="col-sm-10">
-				<br>
-				<center>
-					<h3>Undergrad at NIT Durgapur</h3>
-				</center>
-			</div>
-		</div>
-<hr>
-
-		<div class="row">
-		  <div class="col-sm-10">
-				<div class='container-fluid'>
-				<br><br>
-					{% block content %}
-					{% endblock %}	
-				</div>
-		  </div>
-		</div> 
-	</div>
-
-	<footer>
-		<div class="container" style='background-color: whitesmoke; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'>
-			<p> 
-				<a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a>
-			</p>
-			<p>&copy;Ayan Banerjee 2018, All Rights Reserved</p>
-		</div>
-	</footer>	
-	
-</body>
-
-</html>
+      <script>
+            $(".button-collapse").sideNav();
+      </script>
+    </body>
+  </html>

@@ -1,13 +1,20 @@
 {% extends "personal/header.html" %}
 {% block content %}
 
-<div class = "container", style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
-<h2><a href = "/blog/{{post.id}}">{{ post.title }}</a></h2>
-<h6> on {{ post.date }}</h6>
-
-    {{ post.body | safe | linebreaks }}
-
+<div class="row">
+    <div class="col s12 m12">
+        <div class="card teal darken-1">
+        <div class="card-content white-text">
+            <span class="card-title right-align">{{ post.title }}</span>
+            <hr>
+            <i class="material-icons grey-text text-darken-4 tiny">date_range</i><small class="grey-text text-darken-4 tiny">{{ post.date }}</small>
+            <p>
+                {{ post.body | safe | linebreaks }}
+            </p>
+        </div>
+        </div>
+    </div>
 </div>
 
-<br><br>
+
 {% endblock %}

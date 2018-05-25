@@ -1,7 +1,22 @@
 {% extends "personal/header.html" %}
 
 {% block content %}
-	{% for c in content %}
-		<p>{{c}}</p>
-	{% endfor %}
+<div class="row">
+	<div class = "contact container">
+		<div class="container z-depth-1 col m6 s12">
+			<i class="material-icons red-text">contact_phone</i> 1234567890 <br>
+			<i class="material-icons red-text">contact_mail</i> example@mail.com <br>
+			<i class="material-icons red-text">contact_mail</i> mail@example.com
+		</div>
+	</div>
+	</div>
+
+<div class="row">
+	<div class="contact container z-depth-1 col m6 s12">
+		<i class="material-icons red-text">local_post_office</i>
+		Room No - 117,  Hostel - 9, <br>
+			IIT Bombay, Bombay, <br>
+			Maharashtra<br>
+	</div>
+</div>
 {% endblock %}
